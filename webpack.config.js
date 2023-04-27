@@ -25,7 +25,8 @@ module.exports = {
     devtool: process.env.NODE_ENV === 'development' ? 'source-map' : false,
     devServer: {
       static: path.resolve(__dirname, 'dist'),
-      hot: process.env.NODE_ENV === 'development'
+      hot: false,
+      liveReload: true
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -50,7 +51,7 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.(sa|sc|c)ss$/i,
           use: [
             MiniCssExtractPlugin.loader,
             "css-loader",
@@ -68,7 +69,11 @@ module.exports = {
               ],
             }
           }
-        }
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
       ],
     },
 }
