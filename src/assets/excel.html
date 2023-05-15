@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app" class="container-fluid p-0">
+    <div class="excel">
+      <div class="excel__header d-flex align-items-center justify-content-between py-2 border-bottom">
+        <div class="d-flex align-items-center gap-3">
+          <input type="text" class="form-control border-0" placeholder="Новая таблица">
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+          <button class="btn">
+            <i class="bi bi-box-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+      <div class="excel__toolbar d-flex align-items-center gap-2 py-2 border-bottom bg-light">
+        <button class="btn">
+          <i class="bi bi-text-left"></i>
+        </button>
+        <button class="btn">
+          <i class="bi bi-text-center"></i>
+        </button>
+        <button class="btn">
+          <i class="bi bi-text-right"></i>
+        </button>
+        <button class="btn">
+          <i class="bi bi-type-bold"></i>
+        </button>
+        <button class="btn">
+          <i class="bi bi-type-italic"></i>
+        </button>
+        <button class="btn">
+          <i class="bi bi-type-underline"></i>
+        </button>
+
+      </div>
+      <div class="excel__formula d-flex align-items-center">
+        <div class="px-4 py-1 text-secondary opacity-75 border-end">
+          <i>f<sub>x</sub></i>
+        </div>
+        <div class="w-100">
+          <div class="form-control border-0" contenteditable="true" spellcheck="false">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="excel__table table-responsive">
+        <table class="table table-bordered">
+          <thead class="table-light text-center">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">A</th>
+              <th scope="col">B</th>
+              <th scope="col">C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td contenteditable>Mark</td>
+              <td contenteditable>Otto</td>
+              <td contenteditable>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td contenteditable>Jacob</td>
+              <td contenteditable>Thornton</td>
+              <td contenteditable>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td contenteditable>Larry the Bird</td>
+              <td contenteditable>@twitter</td>
+              <td contenteditable>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
